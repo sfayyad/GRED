@@ -7,27 +7,23 @@
 		<!-- Foundation imports: -->
 		<link rel='stylesheet' type='text/css' href='Foundation/css/foundation.css'></link>
 
-		<!-- Our javascript file -->
-		</link><script src='Javascript/Javascript.js'></script>
 	</head>
 
 	<!-- The onload value means what function should be called when the page is loaded.
 	Beacuse we want to write the website in javascript (to allow for easy changability) we only need the on load function,
 	and a container div. The rest can be build through javascript. -->
-	<body onload="buildPage()">
+	<body onload="buildPage('index.html')">
 
-		<div id="site-container">
+		<div id='container'>
 			<!-- The javascript program will write HTML into this container. We are doing it in javascript so that code
 			that would be used on multiple different pages (like the header) only has to be written once. -->
 		</div>
 
 		<!-- Foundation scripts -->
-		<script src="Foundation/js/vendor/jquery.js"></script>
-		<script src="Foundation/js/vendor/what-input.js"></script>
-		<script src="Foundation/js/vendor/foundation.min.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/what-input.min.js"></script>
+		<script src="js/foundation.min.js"></script>
 		<script>
 			$(document).foundation();
 		</script>
 	</body>
-	
-</html>
