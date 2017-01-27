@@ -16,7 +16,7 @@
 
 
 
-      function drawGraphs(datastr){
+      function drawGraphs(dataStr){
       
           
     //    dataStr = parseDate (dataStr);
