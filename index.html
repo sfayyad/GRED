@@ -6,59 +6,35 @@
 		
 		<!-- Foundation imports: -->
 		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
-
+		
 	</head>
 
 	<!-- The body. This is where all of our webpage code goes -->
 	<body>
 
-		<!-- This is the container for our website. This is useful so that if we want to apply something to the whole page we can apply it to the container.-->
-		<div id='container'>
-		
-			<!-- This it the header-container. All code describing the website header (logo, menu, etc) will be placed in this <div> -->
-			<div id='header-container' class='row'>
-
-		
-			</div>
-
-
-			<!-- This it the content-container. All code describing the website content will be placed in this <div> -->
-			
-
-					<!-- This it the slideshow-container. All code describing the slideshow will be placed in this <div> -->
-			<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-
-			    <ul class="orbit-container"></ul>
-				  <li class="orbit-slide is active">
-				    <img class="orbit-image" src="Default Pics/Ap_Creative_Stock_Header.jpg" alt="Stock Photo">
-				    <figcaption class="orbit-caption">Nice Photo!</figcaption>
-				  </li>
-				  <li class="orbit-slide">
-				    <img class="orbit-image" src="Default Pics/103455746-GettyImages-512791400.600x400.jpg" alt="Stock Photo">
-				    <figcaption class="orbit-caption">Nice Photo!</figcaption>
+				
+		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+			<ul class="orbit-container">
+				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+				<li class="is-active orbit-slide">
+				<img class="orbit-image" src="Default Pics/103455746-GettyImages-512791400.600x400.jpg" alt="Space">
+				<figcaption class="orbit-caption">Space, the final frontier.</figcaption>
 				</li>
-				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span> &#9664;&#xFE0E;</button>
-				<button class="orbit-next"><span class="show-for-sr">Next Slide</span> &#9654;&#xFE0E;</button>
-			  <nav class="orbit-bullets">
-  			    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-  			    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-  			    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-  			    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-			  </nav>
-			</div>
-		</div>
-			
-		<!-- This it the websiteInfo-container. All code describing the boxes on the bottom that
-					has all of the info about the various parts of our website will be placed in this <div> -->
-					<div id='websiteInfo-container' class='row'>
-
-						<!-- CODE -->
-
-					</div>
-
-		</div>
-
+				<li class="orbit-slide">
+				<img class="orbit-image" src="Default Pics/Ap_Creative_Stock_Header.jpg" alt="Space">
+				<figcaption class="orbit-caption">Lets Rocket!</figcaption>
+				</li>
+				
+			</ul>
+			<nav class="orbit-bullets">
+				<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+				<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+				<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+				<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+			</nav>
+		</div>		
+	
 
 		<!-- Foundation scripts -->
 		<script src="Foundation/js/vendor/jquery.js"></script>
