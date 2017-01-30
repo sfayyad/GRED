@@ -6,14 +6,16 @@
 		
 		<!-- Foundation imports: -->
 		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
-		
+			<!-- Insert this within your head tag and after foundation.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
 	</head>
 
 	<!-- The body. This is where all of our webpage code goes -->
 	<body>
 
 				
-		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+
 			<ul class="orbit-container">
 				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
 				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
