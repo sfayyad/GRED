@@ -4,59 +4,60 @@
 	<head>
 		<title>GRED Website</title>
 		
-		<link rel='stylesheet' type='text/css' href="CSS/style.css"></link>
-
 		<!-- Foundation imports: -->
-		<link rel='stylesheet' type='text/css' href="/Foundation/css/foundation.css"></link>
-
+		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
+			<!-- Insert this within your head tag and after foundation.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
 	</head>
 
-	<!-- The body. This is where all of our webpage code goes -->
+	<!-- The body. This is where all of our webpage code goes. The ID's tell you what the div contains and does. -->
 	<body>
-
-		<!-- This is the container for our website. This is useful so that if we want to apply something to the whole page we can apply it to the container.-->
-		<div id='container'>
 		
-			<!-- This it the header-container. All code describing the website header (logo, menu, etc) will be placed in this <div> -->
-			<div id='header-container' class='row'>
-
-			here is some content	<!-- CODE -->
-
-			</div>
-
-
-			<!-- This it the content-container. All code describing the website content will be placed in this <div> -->
-			<div id='content-container' class='row'>
-				<div class='small-12 columns'>
-
-					<!-- This it the slideshow-container. All code describing the slideshow will be placed in this <div> -->
-					<div id='slideshow-container' class='row'>
-
-						<!-- CODE -->
-
+		<div id='Top-Bar' class="top-bar">
+				  <div class="top-bar-left">
+				    <ul class="menu">
+					<li class="menu-text">Greenhills GRED Project</li>
+					<li><a href="#">Charts</a></li>
+					<li><a href="#">Lessons</a></li>
 					</div>
+				 <div class="top-bar-right">
+				    <ul class="menu">
+				      <li><input type="search" placeholder="Search"></li>
+				      <li><button type="button" class="button">Search</button></li>
+				    </ul>
+				  </div>
+			</div>		
+		
+		<div id="SlideShow" class="orbit" role="region" aria-label="Chart Data Defaults" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
 
-					<!-- This it the websiteInfo-container. All code describing the boxes on the bottom that
-					has all of the info about the various parts of our website will be placed in this <div> -->
-					<div id='websiteInfo-container' class='row'>
-
-						<!-- CODE -->
-
-					</div>
-
-				</div>
-			</div>
-
-
-		</div>
-
-
-
+			<ul class="orbit-container">
+				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+				<li class="is-active orbit-slide">
+				<img class="orbit-image" src="Default Pics/103455746-GettyImages-512791400.600x400.jpg" alt="Space">
+				<figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+				</li>
+				<li class="orbit-slide">
+				<img class="orbit-image" src="Default Pics/Ap_Creative_Stock_Header.jpg" alt="Space">
+				<figcaption class="orbit-caption">Lets Rocket!</figcaption>
+				</li>
+				
+			</ul>
+			<nav id="SlideShowBullets" class="orbit-bullets">
+				<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+				<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+				<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+				<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+			</nav>
+		</div>		
+	
+		  
+				
 		<!-- Foundation scripts -->
-
 		<script src="Foundation/js/vendor/jquery.js"></script>
 		<script src="Foundation/js/vendor/what-input.js"></script>
-		<script src="Foundation/js/vendor/foundation.min.js"></script>
+		<script src="Foundation/js/vendor/foundation.js"></script>
+		<script src="Foundation/js/vendor/foundation.orbit.js"></script>
 		<script>
 			$(document).foundation();
 		</script>
