@@ -1,7 +1,24 @@
-#Background {
-background-color: rgba(0, 135, 44, .7);
-width: 1600px;
-height: 160px;
+#TopOfPage {
+background-color: rgb(93, 148, 81);
+height: 800px;
 }
+.MakeBetter{
+color: rgb(255,255,255);
+font-family: 'Raleway', sans-serif;
+font-size: 80px;
 
-color: rgba(0, 135, 44, .7);
+}
+.FontHead{
+font-family: 'Raleway', sans-serif;
+font-size: 60px;
+
+}
+.FontPara{
+font-family: 'Raleway', sans-serif;
+font-size: 30px;
+}
+#SecondMiddle{
+background-color: rgba(95, 95, 95,.2);
+margin-top:400px;	
+height:1000px;
+}
