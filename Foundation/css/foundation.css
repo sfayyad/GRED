@@ -1280,8 +1280,9 @@ td {
 p {
   margin-bottom: 1rem;
   font-size: inherit;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility; }
+  line-height: .6;
+  text-rendering: optimizeLegibility; 
+  text-align: center;}
 
 em,
 i {
@@ -1321,13 +1322,15 @@ h1 {
   font-size: 1.5rem;
   line-height: 1.4;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+  text-align:center;}
 
 h2 {
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+   text-align:center;}
 
 h3 {
   font-size: 1.1875rem;
