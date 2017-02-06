@@ -14,6 +14,19 @@
 
 	<!-- The body. This is where all of our webpage code goes. The ID's tell you what the div contains and does. -->
 	<body>
+		<button onclick="makePage()">click</button>
+    		<script src="makePage.js">
+    		</script>
+		function makePage(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+    if(xmlhttp.readyState==4 && xmlhttp.status==200)
+        alert("webpage " + xmlhttp.responseText + " was successfully created!");
+    }
+    var content = "<html><head><meta charset=\"utf-8\" /> </head><body>new website<script>alert(\"test\")</script></body></html>";
+    xmlhttp.open("GET","makePage.php?content=" + content,true);
+    xmlhttp.send();
+}
 		
 		<div id='Top-Bar' class="top-bar">
 				  <div class="top-bar-left">
