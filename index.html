@@ -1,77 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-	<head>
-		<title>GRED Website</title>
-		
-		<!-- Foundation imports: -->
-		    <link rel="stylesheet" href="Foundation/css/foundation.css">
-		    <link rel="stylesheet" href="Foundation/css/app.css">
-	</head>
-
-	<!-- The body. This is where all of our webpage code goes -->
-	<body>
-
-		<!-- This is the container for our website. This is useful so that if we want to apply something to the whole page we can apply it to the container.-->
-		<div id='container'>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="GRED.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+    <script src="GREDscript.js"></script>
+	<script src="Foundation/js/vendor/foundation.util.keyboard.js"></script>
+	<script src="Foundation/js/vendor/foundation.util.box.js"></script>
+	<script src="Foundation/js/vendor/foundation.util.nest.js"</script>
+	<script src="Foundation/js/vendor/foundation.core.js"></script>
+	<script src="Foundation/js/vendor/foundation.dropdownMenu.js"></script>
+  </head>
+  <body>
+	<ul class="dropdown menu" data-dropdown-menu>
+	<li>
+		<a href="#">Item 1</a>
+		<ul class="menu">
+		<li><a href="#">Item 1A</a></li>
+		<!-- ... -->
+		</ul>
 	
-			<!-- This it the header-container. All code describing the website header (logo, menu, etc) will be placed in this <div> -->
-			<div id='header-container' class="top-bar">
-				  <div class="top-bar-left">
-				    <ul class="menu">
-					<li class="menu-text">Greenhills GRED Project</li>
-					<li><a href="#">Charts</a></li>
-					<li><a href="#">Lessons</a></li>
-					</div>
-				 <div class="top-bar-right">
-				    <ul class="menu">
-				      <li><input type="search" placeholder="Search"></li>
-				      <li><button type="button" class="button">Search</button></li>
-				    </ul>
-				  </div>
-			</div>	  
-								
-											
-					
-														
-
-			
-
-
-			<!-- This it the content-container. All code describing the website content will be placed in this <div> -->
-			<div id='content-container' class='row'>
-				<div class='small-12 columns'>
-
-					<!-- This it the slideshow-container. All code describing the slideshow will be placed in this <div> -->
-					<div id='slideshow-container' class='row'>
-
-						<!-- CODE -->
-
-					</div>
-
-					<!-- This it the websiteInfo-container. All code describing the boxes on the bottom that
-					has all of the info about the various parts of our website will be placed in this <div> -->
-					<div id='websiteInfo-container' class='row'>
-
-						<!-- CODE -->
-
-					</div>
-
-				</div>
-			</div>
-
-
-		</div>
-
-
-
-		<!-- Foundation scripts -->
-		<script src="Foundation/js/vendor/jquery.min.js"></script>
-		<script src="Foundation/js/vendor/what-input.min.js"></script>
-		<script src="Foundation/js/vendor/foundation.js"></script>	
-		<script src ="Foundation/js/app.js"></script>			  
-		<script>
-			$(document).foundation();
-		</script>
-	</body>
+	</li>
+	</ul>  
+    <!--Table and divs that hold the pie charts-->
+    <div id="chartcontainer">
+      <div class="chart1" id="chart1_div" >
+          <span class="loading">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
+          Chart Loading...
+          </span>
+      </div>
+      <div class="chart2" id="chart2_div" >
+          <span  class="loading">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
+          Chart Loading...
+          </span>
+      </div>
+      <div class="dash" id="dashboard_div">
+          <span id='load' class="loading">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
+              Chart Loading...
+          </span>      
+          <div class="chart3" id="chart3_div" >
+          </div>
+          <div class="chartrange" id="slider_div">
+          </div>
+      </div>
+      <div class="chart4" id="chart4_div" >
+          <span class="loading">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
+              Chart Loading...
+          </span>
+      </div>     
+      <div class="buttons">
+          <button id="change">Change View Window</button>
+      </div>
+      <div class="toolbar" id="toolbar_div">
+          
+      </div>
+    </div>
+  </body>
 </html>
