@@ -7,35 +7,52 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
     <script src="GREDscript.js"></script>
   </head>
+	<script>
+		$(function() {
+			$('.chart1').hide();
+			$("[name=chartSelection]").click(function(){
+					$('.chart1').hide();
+					$("#chart"+$(this).val()).show();
+					
+			});
+		 });
+	</script>
   <body>
+
+		<select action="">  
+			<option	 name="chartSelection" value=0> Choose Chart<br>
+			<option	 name="chartSelection" value=1> Chart 1<br>
+			<option  name="chartSelection" value=2> Chart 2<br>
+			<option  name="chartSelection" value=3> Chart3
+		</select>		
     <!--Table and divs that hold the pie charts-->
     <div id="chartcontainer">
-      <div class="chart1" id="chart1_div" >
+      <div class="chart1" id="chart1" style="">
           <span class="loading">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
-          Chart Loading...
+          Chart Loadingasdasd...
           </span>
       </div>
-      <div class="chart2" id="chart2_div" >
+      <div class="chart1" id="chart2" style="">
           <span  class="loading">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
-          Chart Loading...
+          Chart Loadinga...
           </span>
       </div>
-      <div class="dash" id="dashboard_div">
+      <div class="chart1" id="chart3" style="">
           <span id='load' class="loading">
               <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
-              Chart Loading...
+              Chart Loading.dhfghgf..
           </span>      
-          <div class="chart3" id="chart3_div" >
+          <div class="chart1" id="chart3_div" >
           </div>
           <div class="chartrange" id="slider_div">
           </div>
       </div>
-      <div class="chart4" id="chart4_div" >
+      <div class="chart1" id="chart4" style="visibility:hidden">
           <span class="loading">
               <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
-              Chart Loading...
+              Chart Loading.treytryry..
           </span>
       </div>     
       <div class="buttons">
