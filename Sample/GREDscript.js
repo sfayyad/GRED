@@ -10,7 +10,7 @@
 
       google.charts.load('current', {'packages':['corechart', 'controls']});
       google.charts.setOnLoadCallback(function (){
-		$.get("ENV_Hrly_2017.txt",drawGraphs);	      
+		$.get("asd.txt",drawGraphs);	      
       });
 
 
