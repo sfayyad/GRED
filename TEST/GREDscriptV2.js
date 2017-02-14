@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(drawChart);
 		
 		
       	var jsonData = $.ajax({
-      	    url: "getData.php",
+      	    url: "sampleData.json",
       	    dataType: "json",
       	    async: false
       	    }).responseText;
