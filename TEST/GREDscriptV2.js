@@ -4,12 +4,11 @@ google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
 		
 		
-		var jsonData = $.ajax({
-        url: "sampleData.json",
-		type:'get',
-        dataType: "json",
-        async: false
-        }).responseText;
+      	var jsonData = $.ajax({
+      	    url: "getData.php",
+      	    dataType: "json",
+      	    async: false
+      	    }).responseText;
 		
 		var data = new google.visualization.DataTable(jsonData);
 		
