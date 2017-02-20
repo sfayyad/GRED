@@ -32,7 +32,7 @@ def f(dt2):
     
     
     DataDay=[]
-    dt2="3/2/2015"
+    ##dt2="3/2/2015"
     StartDay=dt2.strip()
     if(StartDay==""):
         StartDay="3/1/2015"
