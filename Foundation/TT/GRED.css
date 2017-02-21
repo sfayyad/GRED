@@ -1,0 +1,95 @@
+
+.loading{
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  width: 50%;
+  margin: 0 0 0 0;
+  display: block;
+  text-align: center;
+}
+
+.chart1 {
+  border: 1px solid #ccc;
+  width: 40%;
+  font-size: 25px;
+  position: absolute;
+  top: 5%;
+  left:5%;
+}
+
+.chart2 {
+  border: 1px solid #ccc;
+  width: 40%;
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  left:5%;
+}
+
+.dash{
+  border: 1px solid #ccc;
+  width: 40%;
+  position: absolute;
+  font-size: 25px;
+  top: 5%;
+  left:50%;
+}
+
+
+.chart3 {
+  border: none;
+  width: 100%;
+  height: 90%;
+  position: relative;
+  font-size: 25px;
+  top: 0%;
+  left:0%;
+}
+
+.chartrange{
+  border: none;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  font-size: 25px;
+  top: 90%;
+  left:0%;
+}
+
+.chart4 {
+
+  border: 1px solid #ccc;
+  width: 40%;
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  left:50%;
+}
+
+
+
+.focused{
+  top: 10%;
+  width: 70%;
+  left: 20%;
+
+}
+
+
+.unfocused{
+ float:left;
+ width: 15%;
+}
+
+.buttons{
+position: fixed;
+top: 96%;
+left: 10%;
+}
+
+.toolbar{
+position: fixed;
+top: 96%;
+left: 70%;
+}

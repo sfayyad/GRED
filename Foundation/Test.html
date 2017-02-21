@@ -1,0 +1,40 @@
+<!doctype html>
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Dropdown Pane</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css">
+  
+</head>
+<script>
+function change(obj) {
+    var selectBox = obj;
+    var selected = selectBox.value;
+    var textarea = document.getElementById("chart2_div");
+
+    if(selected === 'saab'){
+        textarea.style.display = "block";
+    }
+    else{
+        textarea.style.display = "none";
+    }
+}
+</script>
+<body>
+<h2>Dropdown Menu Example</h2>
+<select onchange="change(this)">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+ <div class="chart2" id="chart2_div" >
+          <span  class="loading">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" style="width:100%;height:50%;">
+          Chart Loading...
+          </span>
+   </div>	
+
+</body>
+</html>
