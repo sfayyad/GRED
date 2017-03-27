@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px; 
+    border: none;
+    cursor: pointer;
+    width: 400px;
+}
+
+.mathdrpdwn {
+    position: relative;
+    display: inline-block;
+}
+
+.mathdrpdwn-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.mathdrpdwn-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.mathdrpdwn-content a:hover {background-color: #f1f1f1}
+
+.mathdrpdwn:hover .mathdrpdwn-content {
+    display: block;
+}
+
+.mathdrpdwn:hover .dropbtn {
+    background-color: #000080;
+}
+</style>
+</head>
+<body>
+
+<h2>Lessons Page</h2>
+<p>GRED Data Lessons Page</p>
+
+</body>
+</html>
+
+<div class="mathdrpdwn">
+  <button class="dropbtn">Math</button>
+  <div class="mathdrpdwn-content">
+    <a href="#">Algebra 2</a>
+    <a href="#">Functions</a>
+    <a href="#">AP Calculus BC</a>
+  </div>
+</div>
+
+
+<style>
+
+.scidrpdwn {
+    position: relative;
+    display: inline-block;
+}
+
+.scidrpdwn-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.scidrpdwn-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.scidrpdwn-content a:hover {background-color: #f1f1f1}
+
+.scidrpdwn:hover .scidrpdwn-content {
+    display: block;
+}
+
+.scidrpdwn:hover .dropbtn {
+    background-color: #000080;
+}
+</style>
+</head>
+<body>
+
+<div class="scidrpdwn">
+  <button class="dropbtn">Science</button>
+  <div class="scidrpdwn-content">
+    <a href="#">Intro to Biology</a>
+    <a href="#">Advanced Chemistry</a>
+    <a href="#">Physics</a>
+    <a href="#">Advanced Research</a>
+  </div>
+</div>
+
+<h2>
+Algebra 2 Lesson</h2>
+<p> asdasdasdajkdljaaklsjdlkasjdaksljdklas
+jdklasjdaksjdaskldjaskljdklasjdklajdlasj
+dklasjdklsajdlkasmkejl
+ajdklklasjdkljsakldjaskldjlaksjdkmekdj
+klaejkldwajdklcasldjaklwjdklwajeakdmal
+ksdaklnrklwrjkjelkcnaflkajkjelwakejlak
+seklasndklanakledklwjeklajdakmklaerklwj
+riotuoireutieqojr302548109uca0sducjoim9
+q33hr0913h0r10er1209ur489hfjnalnxcsald3
+8q205u10857130u013u4013rfihfouadhfaor302
+50328095qdhjalshdakskldhashdaslhdsakl
+hflsahkfsahfklhcaneiowirt0i4014u0113
+0985w7r0wer0ewr0wur0equw0w00w</p>
+
+
+</body>
+</html>
