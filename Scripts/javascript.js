@@ -6,7 +6,7 @@ window.onload = window.onload = function() {
 function buildHeader(){
 
 
-	var names = ["Home", "Charts", "Lessons", "Resources"];	
+	var names = ["Home", "Charts", "Lessons", "Resources","Test"];	
 	var pages = ["index", "ChartsPage", "lessonspage", "resources"]
 
 	var element = document.createElement("div");
