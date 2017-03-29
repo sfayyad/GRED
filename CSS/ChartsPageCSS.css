@@ -19,6 +19,7 @@ IMG.displayed {
     top: 20%;
     margin-left: auto;
     margin-right: auto }
+
 input[type=text] {
     width: 190px;
     box-sizing: border-box;
@@ -50,7 +51,7 @@ input[type=text] {
     float: right;
     display: inline-block;
     margin: 0 50px 10px 0;
-    min-width: 82px;
+    min-width: 120px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 20px;	
 }
@@ -59,7 +60,7 @@ input[type=text] {
     float: right;
     margin: 0 65px 10px 0;
     display: inline-block;
-    min-width: 82px;
+    min-width: 120px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;	
 }
