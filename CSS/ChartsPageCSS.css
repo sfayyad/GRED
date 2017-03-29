@@ -1,0 +1,95 @@
+.MakeBetter{
+color: rgb(255,255,255);
+font-family: 'Raleway', sans-serif;
+font-size: 80px;
+
+}
+.FontHead{
+font-family: 'Raleway', sans-serif;
+font-size: 60px;
+
+}
+.FontPara{
+font-family: 'Raleway', sans-serif;
+font-size: 30px;
+}
+IMG.displayed {
+
+    display: block;
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto }
+input[type=text] {
+    width: 190px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    margin: 0 0 10px 62px;
+    float: left;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 15px 20px 15px 40px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;	
+}
+
+.dropdown-a {
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin: 0 50px 10px 0;
+    min-width: 82px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;	
+}
+.dropdown {
+    position: relative;
+    float: right;
+    margin: 0 65px 10px 0;
+    display: inline-block;
+    min-width: 82px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;	
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 82px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;	
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;	
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
