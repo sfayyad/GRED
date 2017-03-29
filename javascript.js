@@ -7,7 +7,7 @@ function buildHeader(){
 
 
 	var names = ["Home", "Charts", "Lessons", "Resources"];	
-	var pages = ["index", "ChartsPage", "lessonspage", "#"]
+	var pages = ["index", "ChartsPage", "lessonspage", "resources"]
 
 	var element = document.createElement("div");
 		element.id = "Top-Bar";
