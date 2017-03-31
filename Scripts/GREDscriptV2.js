@@ -18,20 +18,51 @@ google.charts.setOnLoadCallback(drawChart);
 		
 		
          var options = {
-		  title: 'Cool Chart',
+		  title: 'Cool Graph',
 		  colors:['#3f3f3f', '#199EDA'],
 		  width: 800,
 		  height: 500,
-		  
-		  
         };
+		
+		var chartOptions = {
+		   title: 'Cool Chart',
+		   colors:['#3f3f3f', '#199EDA'],
+		   width: 300,
+		   height: 300,
+		};
 
 		    var chart = new google.visualization.ChartWrapper({
          containerId: 'chart1'
+     }); 	
+			var sideChart = new google.visualization.ChartWrapper({
+         containerId: 'chart2'
      });
+			
+	 
 		 var barsButton = document.getElementById('b1');
 		 var lineButton = document.getElementById('b2');
 
+		 function drawDashboard(){
+			var sideChart = google.visualization.DataTable(view); 
+			var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+			
+			var filter = new google.visualization.ControlWrapper({
+				'controlType': 'CategoryFilter',
+				'containerId': 'filterID',
+				'options': {
+					'filterColumnLabel': 'Column Label',
+					'ui': {
+						'allowingTyping': false,
+						'allowingMultipple': true,
+						'orientation': 'horizontal',
+						'showRangeValues': false,
+						'label': ''
+					}
+				}
+				
+			});	
+		 }
+		 
 		 
 		chart.setOptions(options);
 		 function drawBars() {
@@ -45,6 +76,13 @@ google.charts.setOnLoadCallback(drawChart);
 			 chart.setDataTable(view);
 			 chart.draw();
 		 }
+		 
+		 sideChart.setOptions(chartOptions);
+		 function drawChart() {
+			sideChart.setChartType('Table');
+			sideChart.setDataTable(view);
+			sideChart.draw();
+		 }
 
 		 barsButton.onclick = function () {
 			 drawBars();
@@ -54,6 +92,7 @@ google.charts.setOnLoadCallback(drawChart);
 			 drawLine();
 		 }
 		 drawBars();
+		 drawChart();
 		
 	  }
 		
