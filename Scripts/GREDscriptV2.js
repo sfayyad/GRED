@@ -1,98 +1,54 @@
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+ // Load the Visualization API and the controls package.
+      google.charts.load('current', {'packages':['corechart', 'controls']});
 
-      function drawChart() {
-		
-		
-		var jsonData = $.ajax({
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawDashboard);
+
+      // Callback that creates and populates a data table,
+      // instantiates a dashboard, a range slider and a pie chart,
+      // passes in the data and draws it.
+      function drawDashboard() {
+
+        // Create our data table.
+        var jsonData = $.ajax({
         url: "Data.json",
-		type:'get',
+		    type:'get',
         dataType: "json",
         async: false
-        }).responseText;
-		
-		var data = new google.visualization.DataTable(jsonData);
-		var view = new google.visualization.DataView(data);
-		view.setColumns([0,2])
-		
-		
-		
-         var options = {
-		  title: 'Cool Graph',
-		  colors:['#3f3f3f', '#199EDA'],
-		  width: 800,
-		  height: 500,
-        };
-		
-		var chartOptions = {
-		   title: 'Cool Chart',
-		   colors:['#3f3f3f', '#199EDA'],
-		   width: 300,
-		   height: 300,
-		};
+        }).responseText; 
 
-		    var chart = new google.visualization.ChartWrapper({
-         containerId: 'chart1'
-     }); 	
-			var sideChart = new google.visualization.ChartWrapper({
-         containerId: 'chart2'
-     });
-			
-	 
-		 var barsButton = document.getElementById('b1');
-		 var lineButton = document.getElementById('b2');
+        var data = new google.visualization.DataTable(jsonData);
 
-		 function drawDashboard(){
-			var sideChart = google.visualization.DataTable(view); 
-			var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
-			
-			var filter = new google.visualization.ControlWrapper({
-				'controlType': 'CategoryFilter',
-				'containerId': 'filterID',
-				'options': {
-					'filterColumnLabel': 'Column Label',
-					'ui': {
-						'allowingTyping': false,
-						'allowingMultipple': true,
-						'orientation': 'horizontal',
-						'showRangeValues': false,
-						'label': ''
-					}
-				}
-				
-			});	
-		 }
-		 
-		 
-		chart.setOptions(options);
-		 function drawBars() {
-			 chart.setChartType('ColumnChart');
-			 chart.setDataTable(view);
-			 chart.draw();
-		 }
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
 
-		 function drawLine() {
-			 chart.setChartType('LineChart');
-			 chart.setDataTable(view);
-			 chart.draw();
-		 }
-		 
-		 sideChart.setOptions(chartOptions);
-		 function drawChart() {
-			sideChart.setChartType('Table');
-			sideChart.setDataTable(view);
-			sideChart.draw();
-		 }
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'StringFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Time'
+          } 
+        });
 
-		 barsButton.onclick = function () {
-			 drawBars();
-		 }
+        // Create a pie chart, passing some options
+        var pieChart = new google.visualization.ChartWrapper({
+          'chartType': 'ColumnChart',
+          'containerId': 'chart_div',
+          'options': {
+            'width': 800,
+            'height': 500,
+          }
+        });
 
-		 lineButton.onclick = function () {
-			 drawLine();
-		 }
-		 drawBars();
-		 drawChart();
-		
-	  }
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+        dashboard.bind(donutRangeSlider, pieChart);
+
+        // Draw the dashboard.
+        dashboard.draw(data);
+      }
+
 		
