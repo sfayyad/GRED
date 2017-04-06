@@ -1,56 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head>	
-		<link rel='stylesheet' type='text/css' href="CSS/ChartsPageCSS.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-		<link rel="stylesheet" href="CSS/GRED.css">
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-		<script src="Scripts/GREDscriptV2.js"></script>		
+ // Load the Visualization API and the controls package.
+      google.charts.load('current', {'packages':['corechart', 'controls']});
 
-				<!-- Foundation imports: -->
-		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
-		<link rel='stylesheet' type='text/css' href="Foundation/css/custom.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-			<!-- Insert this within your head tag and after foundation.css -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawDashboard);
 
-		<script src="Scripts/javascript.js"></script>
-</head>
-	<body>
-		<h2 class="FontHead"><center>Charts Page</center></h2>
-		<form>
-		  <input type="text" name="search" placeholder="yy/mm/dd">
-		</form>
-		<div class="dropdown">
-		  <button class="dropbtn">Charts</button>
-		  <div class="dropdown-content">
-			<a href="#">Link 1.1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-		</div>
-		<div class="dropdown">
-		  <button class="dropbtn">Charts</button>
-		  <div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		  </div>
-		</div>
-		
-		<!--ChartStuff-->
-		<input type='button' id='b1' value='Draw Column Chart' />
-		<input type='button' id='b2' value='Draw Line Chart' />
-		<!--Table and divs that hold the pie charts-->
-		<div id="chartcontainer">
-			<div class="chart1" id="chart1"></div>
-			<div id="dashboard_div">
-      			<!--Divs that will hold each control and chart-->
-      			<div id="filter_div"></div>
-      			<div id="chart_div"></div>
-    </div>
-		</div> 
+      // Callback that creates and populates a data table,
+      // instantiates a dashboard, a range slider and a pie chart,
+      // passes in the data and draws it.
+      function drawDashboard() {
 
-	</body>
-</html>
+        // Create our data table.
+        var jsonData = $.ajax({
+        url: "Data.json",
+		    type:'get',
+        dataType: "json",
+        async: false
+        }).responseText; 
+
+        var data = new google.visualization.DataTable(jsonData);
+        var view = new google.visualization.DataView(data);
+
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        // Create a time selector, passing some options
+        var timeFilter = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Time',
+            'ui': {
+              'allowTyping': false,
+              'allowMultiple': true,
+              'orientation': 'horizontal',
+              'showRangeValues': false,
+              'label': 'Time Range'
+            }
+          } 
+        });
+
+       var selector = document.getElementById('format-select');
+
+       selector.onchange = function() {
+          view.setColumns([0,+this.value])
+          dashboard.draw(view);
+       }
+
+        // Create a column chart, passing some options
+        var dataChart = new google.visualization.ChartWrapper({
+          'chartType': 'ColumnChart',
+          'containerId': 'chart_div',
+          'options': {
+            'width': 1600,
+            'height': 500,
+            chartArea: {width: '50%'}
+          }
+        });
+
+        // Establish dependencies, declaring that 'timeFilter' drives 'dataTable',
+        // and the 'dataTable' drives 'dataChart',
+        // so that the chart and table will only display entries that are let through
+        // given the Independent Variable chosen by the   user.
+        dashboard.bind(timeFilter, dataChart);
+
+        // Draw the dashboard.
+        dashboard.draw(view);
+      }
