@@ -5,17 +5,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <meta charset="utf-8"/>
     <script type="text/javascript">
+    google.charts.load('visualization', '1', {packages: ['controls']});
+    google.charts.setOnLoadCallback(drawChart);
 
-      // Load the Visualization API and the controls package.
-      google.charts.load('current', {'packages':['corechart', 'controls']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawDashboard);
-
-      // Callback that creates and populates a data table,
-      // instantiates a dashboard, a range slider and a pie chart,
-      // passes in the data and draws it.
-      function drawDashboard() {
+    function drawChart () {
 
         // Create our data table.
         var jsonData = $.ajax({
@@ -27,46 +20,72 @@
 
         var data = new google.visualization.DataTable(jsonData);
 
-        // Create a dashboard.
-        var dashboard = new google.visualization.Dashboard(
-            document.getElementById('dashboard_div'));
-
-        // Create a range slider, passing some options
-        var donutRangeSlider = new google.visualization.ControlWrapper({
-          'controlType': 'StringFilter',
-          'containerId': 'filter_div',
-          'options': {
-            'filterColumnLabel': 'Time'
-          } 
+        var columnsTable = new google.visualization.DataTable();
+        columnsTable.addColumn('number', 'colIndex');
+        columnsTable.addColumn('string', 'colLabel');
+        var initState= {selectedValues: []};
+        // put the columns into this data table (skip column 0)
+        for (var i = 1; i < data.getNumberOfColumns(); i++) {
+            columnsTable.addRow([i, data.getColumnLabel(i)]);
+            initState.selectedValues.push(data.getColumnLabel(i));
+        }
+        
+        var chart = new google.visualization.ChartWrapper({
+            chartType: 'BarChart',
+            containerId: 'chart_div',
+            dataTable: data,
+            options: {
+                title: 'Data',
+                width: 600,
+                height: 400
+            }
         });
-
-        // Create a pie chart, passing some options
-        var pieChart = new google.visualization.ChartWrapper({
-          'chartType': 'ColumnChart',
-          'containerId': 'chart_div',
-          'options': {
-            'width': 800,
-            'height': 500,
-          }
+        
+        var columnFilter = new google.visualization.ControlWrapper({
+            controlType: 'CategoryFilter',
+            containerId: 'colFilter_div',
+            dataTable: columnsTable,
+            options: {
+                filterColumnLabel: 'colLabel',
+                ui: {
+                    label: 'Columns',
+                    allowTyping: false,
+                    allowMultiple: true,
+                    allowNone: false,
+                    selectedValuesLayout: 'belowStacked'
+                }
+            },
+            state: initState
         });
-
-        // Establish dependencies, declaring that 'filter' drives 'pieChart',
-        // so that the pie chart will only display entries that are let through
-        // given the chosen slider range.
-        dashboard.bind(donutRangeSlider, pieChart);
-
-        // Draw the dashboard.
-        dashboard.draw(data);
-      }
+        
+        function setChartView () {
+            var state = columnFilter.getState();
+            var row;
+            var view = {
+                columns: [0]
+            };
+            for (var i = 0; i < state.selectedValues.length; i++) {
+                row = columnsTable.getFilteredRows([{column: 1, value: state.selectedValues[i]}])[0];
+                view.columns.push(columnsTable.getValue(row, 0));
+            }
+            // sort the indices into their original order
+            view.columns.sort(function (a, b) {
+                return (a - b);
+            });
+            chart.setView(view);
+            chart.draw();
+        }
+        google.visualization.events.addListener(columnFilter, 'statechange', setChartView);
+        
+        setChartView();
+        columnFilter.draw();
+    }
     </script>
   </head>
 
   <body>
     <!--Div that will hold the dashboard-->
-    <div id="dashboard_div">
-      <!--Divs that will hold each control and chart-->
-      <div id="filter_div"></div>
-      <div id="chart_div"></div>
-    </div>
+    <div id="colFilter_div"></div>
+    <div id="chart_div"></div>
   </body>
 </html>
