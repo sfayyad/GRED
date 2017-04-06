@@ -1,4 +1,4 @@
-  // Load the Visualization API and the controls package.
+ // Load the Visualization API and the controls package.
       google.charts.load('current', {'packages':['corechart', 'controls']});
 
       // Set a callback to run when the Google Visualization API is loaded.
@@ -18,21 +18,36 @@
         }).responseText; 
 
         var data = new google.visualization.DataTable(jsonData);
+        var view = new google.visualization.DataView(data);
 
         // Create a dashboard.
         var dashboard = new google.visualization.Dashboard(
             document.getElementById('dashboard_div'));
 
-        // Create a range slider, passing some options
-        var filter = new google.visualization.ControlWrapper({
-          'controlType': 'StringFilter',
+        // Create a time selector, passing some options
+        var timeFilter = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
           'containerId': 'filter_div',
           'options': {
-            'filterColumnLabel': 'Time'
+            'filterColumnLabel': 'Time',
+            'ui': {
+              'allowTyping': false,
+              'allowMultiple': true,
+              'orientation': 'horizontal',
+              'showRangeValues': false,
+              'label': 'Time Range'
+            }
           } 
         });
 
-        // Create a pie chart, passing some options
+       var selector = document.getElementById('format-select');
+
+       selector.onchange = function() {
+          view.setColumns([0,+this.value])
+          dashboard.draw(view);
+       }
+
+        // Create a column chart, passing some options
         var dataChart = new google.visualization.ChartWrapper({
           'chartType': 'ColumnChart',
           'containerId': 'chart_div',
@@ -43,14 +58,13 @@
           }
         });
 
-        // Establish dependencies, declaring that 'filter' drives 'dataChart',
-        // so that the pie chart will only display entries that are let through
-        // given the chosen slider range.
-        dashboard.bind(filter, dataChart);
+        // Establish dependencies, declaring that 'timeFilter' drives 'dataTable',
+        // and the 'dataTable' drives 'dataChart',
+        // so that the chart and table will only display entries that are let through
+        // given the Independent Variable chosen by the   user.
+        dashboard.bind(timeFilter, dataChart);
 
         // Draw the dashboard.
-        dashboard.draw(data);
+        dashboard.draw(view);
       }
-
-
 		
