@@ -25,14 +25,21 @@
 
         // Create a range slider, passing some options
         var filter = new google.visualization.ControlWrapper({
-          'controlType': 'StringFilter',
+          'controlType': 'CategoryFilter',
           'containerId': 'filter_div',
           'options': {
-            'filterColumnLabel': 'Time'
+            'filterColumnLabel': 'Time',
+            'ui': {
+              'allowTyping': false,
+              'allowMultiple': true,
+              'orientation': 'horizontal',
+              'showRangeValues': false,
+              'label': 'Time Range'
+            }
           } 
         });
 
-        // Create a pie chart, passing some options
+        // Create a column chart, passing some options
         var dataChart = new google.visualization.ChartWrapper({
           'chartType': 'ColumnChart',
           'containerId': 'chart_div',
@@ -43,9 +50,10 @@
           }
         });
 
-        // Establish dependencies, declaring that 'filter' drives 'dataChart',
-        // so that the pie chart will only display entries that are let through
-        // given the chosen slider range.
+        // Establish dependencies, declaring that 'filter' drives 'dataTable',
+        // and the 'dataTable' drives 'dataChart',
+        // so that the chart and table will only display entries that are let through
+        // given the Independent Variable chosen by the user.
         dashboard.bind(filter, dataChart);
 
         // Draw the dashboard.
