@@ -95,3 +95,7 @@ input[type=text] {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+.selector {
+    width: 20%;
+}
