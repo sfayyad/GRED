@@ -21,6 +21,8 @@ font-size: 45px;
 .FontPara{
 font-family: 'Raleway', sans-serif;
 font-size: 30px;
+line-height: normal;
+
 }
 #SecondMiddle{
 background-color: rgba(95, 95, 95,.2);
