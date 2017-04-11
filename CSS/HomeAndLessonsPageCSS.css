@@ -65,7 +65,6 @@ div.desc {
 
 .mathdrpdwn {
     position: relative;
-    float: right;
     display: inline-block;
 	font-family: 'Raleway', sans-serif;
 	font-size: 20px;
@@ -100,7 +99,6 @@ div.desc {
 }
 .scidrpdwn {
     position: relative;
-    float: left;
     display: inline-block;
 }
 
