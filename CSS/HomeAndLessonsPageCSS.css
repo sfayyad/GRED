@@ -11,11 +11,20 @@ font-size: 80px;
 .FontHead{
 font-family: 'Raleway', sans-serif;
 font-size: 60px;
+padding-top: 50px;
+
+}
+.FontTitle{
+font-family: 'Raleway', sans-serif;
+font-size: 30px;
+padding-top: 20px;
 
 }
 .FontPara{
 font-family: 'Raleway', sans-serif;
-font-size: 30px;
+font-size: 20px;
+line-height: normal;
+
 }
 #SecondMiddle{
 background-color: rgba(95, 95, 95,.2);
@@ -65,7 +74,7 @@ div.desc {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 	font-family: 'Raleway', sans-serif;
@@ -97,7 +106,7 @@ div.desc {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 	font-family: 'Raleway', sans-serif;
