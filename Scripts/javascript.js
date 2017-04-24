@@ -6,14 +6,14 @@ window.onload = window.onload = function() {
 function buildHeader(){
 
 
-	var names = ["Home", "Charts", "Lessons", "Resources","Test"];	
-	var pages = ["index", "ChartsPage", "lessonspage", "resources"]
+	var names = ["Home", "Charts", "Lessons", "Resources"];	
+	var pages = ["index", "ChartsPage", "LessonsPage", "resources"]
 
 	var element = document.createElement("div");
 		element.id = "Top-Bar";
 		element.className = "top-bar";
 
-	var inner = "<div id='Top-Bar' class='top-bar'>" +
+	var inner =
 			"<div class='top-bar-left'>" +
 				"<ul class='menu'>" +
 					"<li class='menu-text'>Greenhills GRED Project</li>" +

@@ -1,0 +1,19 @@
+.resources-productImage{
+
+}
+.resources-productTitle{
+
+}
+#Top-Bar, .top-bar-left > ul, .top-bar-right > ul{
+	background-color: #4CAF50;
+}
+.top-bar-right > ul > li > a{
+	color: white;
+}
+.top-bar-right > ul > li > a:hover{
+	color: black;
+}
+
+#excelTitle{
+	margin-top: 21px;
+}

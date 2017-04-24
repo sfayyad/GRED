@@ -7,10 +7,12 @@
 		<!-- Foundation imports: -->
 		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-			<!-- Insert this within your head tag and after foundation.css -->
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
 
 		<script src="Scripts/javascript.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
 	</head>
 
 	<body>
@@ -21,27 +23,39 @@
 
 		<div class="row">
 			<div class="small-12 medium-6 columns">
+				<img src="Default Pics/fathom.jpg" class="resources-productImage"></img>
 
-				<div class="row">
-					<div class="small-12 columns">
-						<img src="Default Pics/download.png"></img>
-						<h4>Fathom</h4>
-					</div>
-				</div>
+				<h4 class="resources-productTitle">Fathom</h4>
 
+				<ul>
+					<li>Fathom is great for doing statitical analyis</li>
+					<li>You can create lines of best fit, graph various distributions, and more</li>
+					<li>Click <a href="https://fathom.concord.org/download/" target="_blank">here</a> to download Fathom and view the official Fatom page</li>
+				</ul>
 			</div>
 
 			<div class="small-12 medium-6 columns">
+				<img src="Default Pics/excel.png" class="resources-productImage"></img>
 
-				<div class="row">
-					<div class="small-12 columns">
-						<img src="Default Pics/download.png"></img>
-						<h4>Excel</h4>
-					</div>
-				</div>
+				<h4 id="excelTitle" class="resources-productTitle">Excel</h4>
 
+				<ul>
+					<li>Excel is useful for crunching big sets of data</li>
+					<li>You can sort, create graphs, and more</li>
+					<li>Click <a href="chartsPage.html">here</a> to download an excel file of the GRED data</li>
+				</ul>
 			</div>
 		</div>
+
+
+
+		<!-- Foundation scripts -->
+		<script src="Foundation/js/vendor/jquery.js"></script>
+		<script src="Foundation/js/vendor/what-input.js"></script>
+		<script src="Foundation/js/vendor/foundation.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
 
 	</body>
 
