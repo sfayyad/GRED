@@ -8,6 +8,12 @@ font-family: 'Raleway', sans-serif;
 font-size: 80px;
 
 }
+.MakeWhite{
+color: rgb(255,255,255);
+font-family: 'Raleway', sans-serif;
+font-size: 20px;
+
+}
 .FontHead{
 font-family: 'Raleway', sans-serif;
 font-size: 60px;
@@ -129,9 +135,4 @@ div.desc {
 .scidrpdwn:hover .dropbtn {
     background-color: #000080;
 }
-
-.img:students {
-    padding-bottom: 10px;
-}
-
 
