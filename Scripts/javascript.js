@@ -1,7 +1,7 @@
 window.onload = window.onload = function() {
 	buildHeader();
 };
-#Thank you Leo for making this!
+
 
 function buildHeader(){
 
