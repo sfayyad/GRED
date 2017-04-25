@@ -2,7 +2,7 @@ window.onload = window.onload = function() {
 	buildHeader();
 };
 
-
+//Thank you for making this Leo!
 function buildHeader(){
 
 
