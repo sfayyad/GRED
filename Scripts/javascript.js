@@ -6,8 +6,8 @@ window.onload = window.onload = function() {
 function buildHeader(){
 
 
-	var names = ["Home", "Charts", "Lessons", "Resources", "About"];	
-	var pages = ["index", "ChartsPage", "LessonsPage", "resources", "About"];
+	var names = ["Home", "Charts", "Lessons", "Resources"];	
+	var pages = ["index", "ChartsPage", "LessonsPage", "resources"];
 
 	var element = document.createElement("div");
 		element.id = "Top-Bar";
