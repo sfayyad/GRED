@@ -27,7 +27,7 @@
         // Create a time selector, passing some options
         var timeFilter = new google.visualization.ControlWrapper({
           'controlType': 'CategoryFilter',
-          'containerId': 'filter_div',
+          'containerId': 'filter_divs',
           'options': {
             'filterColumnLabel': 'Time',
             'ui': {
