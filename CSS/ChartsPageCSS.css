@@ -15,77 +15,125 @@ font-size: 30px;
 }
 
 input[type=text] {
-    width: 190px;
-    height: 55px;
+    width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    margin: 0 25px 10px 200px;
-    float: left;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-image: url('http://i.imgur.com/s6TANEf.png');
+    background-position: 5px 5px; 
     background-repeat: no-repeat;
-    padding: 15px 20px 15px 40px;
+    padding: 12px 20px 12px 40px;
+}
+input[type=text1] {
+    width: 170px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 0px 10px 0px 0px;
+    font-size: 16px;
+    float: right;
+    background-color: white;
+    background-image: url('http://i.imgur.com/s6TANEf.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: rgb(70, 162, 68);
+    style= vertical-align: top;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-	font-family: 'Raleway', sans-serif;
-	font-size: 30px;	
-}
-
-.dropdown-a {
-    position: relative;
-    float: right;
-    display: inline-block;
-    margin: 0 50px 10px 0;
-    min-width: 120px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 20px;	
-}
-.dropdown {
-    position: relative;
-    float: right;
-    margin: 0 150px 10px 0;
-    display: inline-block;
-    min-width: 120px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 30px;	
+    height: 60px;
+    width: 170px;
+    border-radius: 5px;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 82px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-	font-family: 'Raleway', sans-serif;
-	font-size: 20px;	
+  
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-	font-family: 'Raleway', sans-serif;
-	font-size: 20px;	
+    background-color: none;
+    border: none;
+    width: 110px;
 }
-
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.dropbtn:hover {background-color:rgb(70, 147, 0)}
 
-.dropdown:hover .dropbtn {
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+table {
+    border-collapse: collapse;
+}
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 0px 0px; /* Some padding */
+    width: 140px;
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group .button:hover {
     background-color: #3e8e41;
 }
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 275px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button1 {width: 300px;}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+p {
+    font-size: 250%;
+    margin: 0 10px 0 10px;
+    padding: 0 0 0 0;
+}
+
