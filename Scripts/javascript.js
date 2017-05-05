@@ -1,8 +1,9 @@
 window.onload = window.onload = function() {
 	buildHeader();
+	buildFooter();
 };
 
-//Thank you for making this Leo!
+
 function buildHeader(){
 
 
@@ -33,5 +34,22 @@ function buildHeader(){
 	element.innerHTML = inner;
 
 	document.body.insertBefore(element, document.body.firstChild);
+
+}
+
+function buildFooter(){
+
+	var row = document.createElement("div");
+		row.className = "row";
+
+	var col = document.createElement("div");
+		col.className = "small-12 columns";
+	
+	var inner = "<p> Contact Us at  a3l3s@greenhillsschool.org </p>";
+	
+	
+	col.innerHTML = inner;
+	row.appendChild(col);
+	document.body.appendChild(row);
 
 }
