@@ -18,47 +18,71 @@
 		<script src="Scripts/javascript.js"></script>
 </head>
 	<body>
-		<h2 class="FontHead"><center>Charts Page</center></h2>
-		<div>First Date</div>
-		<form>
-		  <input type="text" id="date-select" placeholder="yy/mm/dd">
-		</form>
-		<!--Table and divs that hold the pie charts-->
-		<div id="chartcontainer">
-			<div class="chart1" id="chart1"></div>
-			<div id="dashboard_div">
-      			<!--Divs that will hold each control and chart-->
-      			<div id="filter_div"></div>
-						<select class="selector" id="format-select">
-							<option value=1>Environment Duration Average</option>
-							<option value=2>Outside Temperature Average</option>
-							<option value=3>Wind Chill Average</option>
-							<option value=4>Heat Index Average</option>
-							<option value=5>Dew Point Average</option>
-							<option value=6>Humidity Average</option>
-							<option value=7>Wind Speed Average</option>
-							<option value=8>Rain Rate Average</option>
-							<option value=9>Barometer Average</option>
-							<option value=10>Solar Radiance Average</option>
-							<option value=11>Green Roof Temperature Average</option>
-							<option value=12>White Rood Temperature Average</option>
-							<option value=13>Environment Duration Minumum</option>
-							<option value=14>Outside Temperature Minumum</option>
-							<option value=15>Wind Chill Minumum</option>
-							<option value=16>Heat Index Minumum</option>
-							<option value=17>Dew Point Minumum</option>
-							<option value=18>Humidity Minumum</option>
-							<option value=19>Wind Speed Minumum</option>
-							<option value=20>Rain Rate Minumum</option>
-							<option value=21>Barometer Minumum</option>
-							<option value=22>Solar Radiance Minumum</option>
-							<option value=23>Green Roof Temperature Minumum</option>
-							<option value=24>White Rood Temperature Minumum</option>
-						</select>
-						<div id="table_div"></div>
-      			<div id="chart_div"></div>
-    </div>
-		</div> 
+	<table>
+  
+  <tr>
+    <th><center><form><input type="text" name="search" placeholder="mm/dd/yy"></form></center></th>
+    <th><p>to</p><th>
+    <th><left><form><input type="text1" name="search" placeholder="mm/dd/yy"></form></left></th>
+    <th><button class="button" class=“active”>Linechart</button><th>
+    <th><button class="button" class=“active”>Bar Graph</button><th>
+    <th><button class="button" class=“active”>Data Table</button><th>
+  </tr>
 
-	</body>
+  <tr>
+    <th><br></th>
+    <th  id="filter_div" valign="top"><div  class="dropdown">
+  <button class="dropbtn">Time</button>
+  <center><div  class="dropdown-content">
+    <a href="#">12:00AM</a>
+    <a href="#">1:00AM</a>
+    <a href="#">2:00AM</a>
+    <a href="#">3:00AM</a>
+    <a href="#">4:00AM</a>
+    <a href="#">5:00AM</a>
+    <a href="#">6:00AM</a>
+    <a href="#">7:00AM</a>
+    <a href="#">8:00AM</a>
+    <a href="#">9:00AM</a>
+    <a href="#">10:00AM</a>
+    <a href="#">11:00AM</a>
+    <a href="#">12:00PM</a>
+    <a href="#">1:00PM</a>
+    <a href="#">2:00PM</a>
+    <a href="#">3:00PM</a>
+    <a href="#">4:00PM</a>
+    <a href="#">5:00PM</a>
+    <a href="#">6:00PM</a>
+    <a href="#">7:00PM</a>
+    <a href="#">8:00PM</a>
+    <a href="#">9:00PM</a>
+    <a href="#">10:00PM</a>
+    <a href="#">11:00PM</a>
+    
+  </div></center>
+
+    <th></th>
+    <th></th>
+
+</div></th>
+    <th valign="top"><div class="dropdown">
+  <button class="dropbtn">Categories</button>
+  <center><div class="dropdown-content">
+    <a href="#">Environment Duration</a>
+    <a href="#">Outside Temperature</a>
+    <a href="#">Wind Chill</a>
+    <a href="#">Heat Index</a>
+    <a href="#">Dew Point</a>
+    <a href="#">Humidity</a>
+    <a href="#">Wind Speed</a>
+    <a href="#"> Rain Rate</a>
+    <a href="#">Barometer</a>
+    <a href="#">Solar Radiance</a>
+    <a href="#">Green Roof Temperature</a>
+    <a href="#">White Rood Temperature</a>
+   </div></center>
+</div></th></tr>
+  
+</table>
+</body>
 </html>
