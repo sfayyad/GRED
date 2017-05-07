@@ -15,16 +15,19 @@
 		    type:'get',
         dataType: "json",
         async: false
-        }).responseText; 
+        }).responseText;
+
+        
 
         var data = new google.visualization.DataTable(jsonData);
+        var view = new google.visualization.DataView(data);
 
         // Create a dashboard.
         var dashboard = new google.visualization.Dashboard(
             document.getElementById('dashboard_div'));
-
-        // Create a range slider, passing some options
-        var filter = new google.visualization.ControlWrapper({
+ 
+        // Create a time selector, passing some options
+        var timeFilter = new google.visualization.ControlWrapper({
           'controlType': 'CategoryFilter',
           'containerId': 'filter_div',
           'options': {
@@ -39,6 +42,26 @@
           } 
         });
 
+        var formChecker = new google.visualization.ControlWrapper({
+          
+        })
+
+        var dataFilter = new google.visualization.ControlWrapper({
+          'controlType': 'StringFilter',
+        })
+
+       var dateSelector = document.getElementById('date-select');
+       var selector = document.getElementById('format-select');
+
+       selector.onchange = function() {
+          view.setColumns([0,+this.value])
+          dashboard.draw(view);
+       }
+
+       dateSelector.onchange = function() {
+          
+       }
+
         // Create a column chart, passing some options
         var dataChart = new google.visualization.ChartWrapper({
           'chartType': 'ColumnChart',
@@ -46,17 +69,17 @@
           'options': {
             'width': 1600,
             'height': 500,
+            //'isStacked' : true,
             chartArea: {width: '50%'}
           }
         });
 
-        // Establish dependencies, declaring that 'filter' drives 'dataTable',
+        // Establish dependencies, declaring that 'timeFilter' drives 'dataTable',
         // and the 'dataTable' drives 'dataChart',
         // so that the chart and table will only display entries that are let through
-        // given the Independent Variable chosen by the user.
-        dashboard.bind(filter, dataChart);
+        // given the Independent Variable chosen by the   user.
+        dashboard.bind(timeFilter, dataChart);
 
         // Draw the dashboard.
-        dashboard.draw(data);
+        dashboard.draw(view);
       }
-
