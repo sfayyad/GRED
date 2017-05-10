@@ -6,39 +6,46 @@ font-size: 80px;
 }
 .FontHead{
 font-family: 'Raleway', sans-serif;
-font-size: 60px;
-
+font-size: 100px;
 }
+
 .FontPara{
 font-family: 'Raleway', sans-serif;
-font-size: 150px;
+font-size: 100px;
+}
+
+.two{
+    text-align: center;
 }
 
 input[type=text] {
     width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
+    height: 50px;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
     background-image: url('http://i.imgur.com/s6TANEf.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
+    margin: 7px 0px 0px 0px;
     padding: 12px 20px 12px 40px;
 }
 input[type=text1] {
     width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
+    height: 50px;
     border-radius: 4px;
-    margin: 0px 10px 0px 0px;
     font-size: 16px;
-    float: right;
     background-color: white;
     background-image: url('http://i.imgur.com/s6TANEf.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
+    margin: 7px 10px 0px 0px;
+    float: right;
 }
 
 .dropbtn {
@@ -67,7 +74,7 @@ input[type=text1] {
     border: none;
     width: 110px;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #ffffff}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -83,6 +90,13 @@ th {
 }
 table {
     border-collapse: collapse;
+}
+
+tr {
+    background-color: #ffffff;
+}
+th {
+    background-color: #ffffff;
 }
 
 .btn-group button {
@@ -112,18 +126,20 @@ table {
 .btn-group .button:hover {
     background-color: #3e8e41;
 }
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     width: 275px;
-    height: 50px;
+    height: 60px;
+    margin:0 0 0 0;
     border-radius: 5px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
 }
 .button1 {width: 300px;}
 
@@ -132,7 +148,7 @@ button:active {
 }
 
 p {
-    font-size: 250%;
+    font-size: 50%;
     margin: 0 10px 0 10px;
     padding: 0 0 0 0;
 }
