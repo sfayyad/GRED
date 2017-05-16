@@ -18,22 +18,20 @@
 		<script src="Scripts/javascript.js"></script>
 </head>
 	<body>
-	<table>
+	<table bgcolor="#ffffff">
   
   <tr>
-    <th><center><form><input type="text" name="search" placeholder="mm/dd/yy"></form></center></th>
-    <th><p>to</p><th>
-    <th><left><form><input type="text1" name="search" placeholder="mm/dd/yy"></form></left></th>
-    <th><button class="button" class=“active”>Linechart</button><th>
+    <th valign="top"><center><form><input type="text" name="search" placeholder="mm/dd/yy"></form></center></th>
+    <th valign="top"><h3>to</h3></th>
+    <th valign="top"><left><form><input type="text1" name="search" placeholder="mm/dd/yy"></form></left></th>
+    <th class=”nopads” ><button class="button" class=“active”>Linechart</button><th>
     <th><button class="button" class=“active”>Bar Graph</button><th>
     <th><button class="button" class=“active”>Data Table</button><th>
   </tr>
-
-  <tr>
-    <th><br></th>
-    <th valign="top"><div class="dropdown">
+  <tr bgcolor="#ffffff">
+    <th  id="filter_div" valign="top"><div  class="dropdown">
   <button class="dropbtn">Time</button>
-  <center><div class="dropdown-content">
+  <center><div  class="dropdown-content">
     <a href="#">12:00AM</a>
     <a href="#">1:00AM</a>
     <a href="#">2:00AM</a>
@@ -62,7 +60,6 @@
   </div></center>
 
     <th></th>
-    <th></th>
 
 </div></th>
     <th valign="top"><div class="dropdown">
@@ -81,7 +78,10 @@
     <a href="#">Green Roof Temperature</a>
     <a href="#">White Rood Temperature</a>
    </div></center>
-</div></th></tr>
+</div></th>
+</tr>
+<tr></tr>
+
   
 </table>
 </body>
