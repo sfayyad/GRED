@@ -39,6 +39,10 @@ function buildHeader(){
 
 function buildFooter(){
 
+	var blank = document.createElement("div");
+		blank.className = "row";
+		blank.innerHTML = "&nbsp;";
+
 	var row = document.createElement("div");
 		row.className = "row";
 
@@ -50,6 +54,7 @@ function buildFooter(){
 	
 	col.innerHTML = inner;
 	row.appendChild(col);
+	document.body.appendChild(blank);
 	document.body.appendChild(row);
 
 }
