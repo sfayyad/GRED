@@ -1,51 +1,28 @@
-.MakeBetter{
-color: rgb(255,255,255);
-font-family: 'Raleway', sans-serif;
-font-size: 80px;
-
-}
-.FontHead{
-font-family: 'Raleway', sans-serif;
-font-size: 100px;
-}
-
-.FontPara{
-font-family: 'Raleway', sans-serif;
-font-size: 100px;
-}
-
-.two{
-    text-align: center;
-}
-
 input[type=text] {
     width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    height: 50px;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
     background-image: url('http://i.imgur.com/s6TANEf.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
-    margin: 7px 0px 0px 0px;
     padding: 12px 20px 12px 40px;
 }
 input[type=text1] {
     width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    height: 50px;
     border-radius: 4px;
+    margin: 0px 10px 0px 0px;
     font-size: 16px;
+    float: right;
     background-color: white;
     background-image: url('http://i.imgur.com/s6TANEf.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    margin: 7px 10px 0px 0px;
-    float: right;
 }
 
 .dropbtn {
@@ -56,8 +33,8 @@ input[type=text1] {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    height: 60px;
-    width: 170px;
+    height: 50px;
+    width: 180px;
     border-radius: 5px;
 }
 
@@ -74,7 +51,7 @@ input[type=text1] {
     border: none;
     width: 110px;
 }
-.dropdown-content a:hover {background-color: #ffffff}
+.dropdown-content a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -90,13 +67,6 @@ th {
 }
 table {
     border-collapse: collapse;
-}
-
-tr {
-    background-color: #ffffff;
-}
-th {
-    background-color: #ffffff;
 }
 
 .btn-group button {
@@ -126,20 +96,18 @@ th {
 .btn-group .button:hover {
     background-color: #3e8e41;
 }
-
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    width: 275px;
-    height: 60px;
-    margin:0 0 0 0;
+    width: 225px;
+    height: 50px;
     border-radius: 5px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 16px;
 }
 .button1 {width: 300px;}
 
@@ -148,7 +116,7 @@ button:active {
 }
 
 p {
-    font-size: 50%;
+    font-size: 250%;
     margin: 0 10px 0 10px;
     padding: 0 0 0 0;
 }
