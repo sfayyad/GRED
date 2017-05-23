@@ -1,65 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>	
-		<link rel='stylesheet' type='text/css' href="CSS/ChartsPageCSS.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-		<link rel="stylesheet" href="CSS/GRED.css">
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-		<script src="Scripts/GREDscriptV2.js"></script>		
-
-				<!-- Foundation imports: -->
-		<link rel='stylesheet' type='text/css' href="Foundation/css/foundation.css">
-		<link rel='stylesheet' type='text/css' href="Foundation/css/custom.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-			<!-- Insert this within your head tag and after foundation.css -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
-
-		<script src="Scripts/javascript.js"></script>
-</head>
-	<body>
-	<table bgcolor="#ffffff">
+<body>
+<table>
   
   <tr>
-    <th valign="top"><center><form><input type="text" name="search" placeholder="mm/dd/yy"></form></center></th>
-    <th valign="top"><h3>to</h3></th>
-    <th valign="top"><left><form><input type="text1" name="search" placeholder="mm/dd/yy"></form></left></th>
-    <th class=”nopads” ><button class="button" class=“active”>Linechart</button><th>
-    <th><button class="button" class=“active”>Bar Graph</button><th>
-    <th><button class="button" class=“active”>Data Table</button><th>
+    <th><center><form><input type="text" name="search" placeholder="mm/dd/yy"></form></center></th>
+    <th><p>to</p></th>
+    <th><left><form><input type="text1" name="search" placeholder="mm/dd/yy"></form></left></th>
+    <th><button class="button" class=“active”>Linechart</button></th>
+    <th><button class="button" class=“active”>Bar Graph</button></th>
+    <th><button class="button" class=“active”>Data Table</button></th>
   </tr>
-  <tr bgcolor="#ffffff">
-    <th  id="filter_div" valign="top"><div  class="dropdown">
-  <button class="dropbtn">Time</button>
-  <center><div  class="dropdown-content">
-    <a href="#">12:00AM</a>
-    <a href="#">1:00AM</a>
-    <a href="#">2:00AM</a>
-    <a href="#">3:00AM</a>
-    <a href="#">4:00AM</a>
-    <a href="#">5:00AM</a>
-    <a href="#">6:00AM</a>
-    <a href="#">7:00AM</a>
-    <a href="#">8:00AM</a>
-    <a href="#">9:00AM</a>
-    <a href="#">10:00AM</a>
-    <a href="#">11:00AM</a>
-    <a href="#">12:00PM</a>
-    <a href="#">1:00PM</a>
-    <a href="#">2:00PM</a>
-    <a href="#">3:00PM</a>
-    <a href="#">4:00PM</a>
-    <a href="#">5:00PM</a>
-    <a href="#">6:00PM</a>
-    <a href="#">7:00PM</a>
-    <a href="#">8:00PM</a>
-    <a href="#">9:00PM</a>
-    <a href="#">10:00PM</a>
-    <a href="#">11:00PM</a>
-    
-  </div></center>
 
-    <th></th>
+  <tr>
+    <th><br></tr>
+    <th valign="top"><div class="dropdown">
+  <button class="dropbtn">Example Charts</button>
+  <center><div class="dropdown-content">
+    <a href="#">Linear</a>
+    <a href="#">Quadratic</a>
+    <a href="#">Exponential</a>
+    <a href="#">Sinusoidal</a>    
+  </div></center>
 
 </div></th>
     <th valign="top"><div class="dropdown">
@@ -76,12 +38,20 @@
     <a href="#">Barometer</a>
     <a href="#">Solar Radiance</a>
     <a href="#">Green Roof Temperature</a>
-    <a href="#">White Rood Temperature</a>
+    <a href="#">White Roof Temperature</a>
    </div></center>
 </div></th>
-</tr>
-<tr></tr>
 
+
+<th valign="top"><button class="dropbtn">Submit</button><br></th>
+
+<th valign="top"><button class="button" class=“active”>Maximum</button><br></th>
+  
+<th valign="top"><button class="button" class=“active”>Average</button><br></th>
+  
+<th valign="top"><button class="button" class=“active”>Minimum</button><br></th>
+
+   </tr>
   
 </table>
 </body>
