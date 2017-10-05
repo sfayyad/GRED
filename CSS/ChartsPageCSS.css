@@ -52,12 +52,12 @@ input[type=text1] {
     width: 110px;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1};
+/*.dropdown-content a:hover {background-color: #f1f1f1};*/
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.dropbtn:hover {background-color:rgb(70, 147, 0)};
+/*.dropbtn:hover {background-color:rgb(70, 147, 0)};*/
 
 table {
     width: 100%;
