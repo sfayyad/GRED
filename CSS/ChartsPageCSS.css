@@ -63,10 +63,12 @@ input[type=text1] {
 
 table {
     width: 100%;
+    background-color:white;
 }
 
 th {
     height: 50px;
+
 }
 table {
     border-collapse: collapse;
