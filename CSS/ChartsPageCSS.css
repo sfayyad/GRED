@@ -58,6 +58,7 @@ input[type=text1] {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /*.dropbtn:hover {background-color:rgb(70, 147, 0)};*/
 
 table {
